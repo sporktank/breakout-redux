@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Brick.gd" type="Script" id=1]
+[ext_resource path="res://objects/element_blue_rectangle_glossy.png" type="Texture" id=2]
+[ext_resource path="res://objects/element_green_rectangle_glossy.png" type="Texture" id=3]
+[ext_resource path="res://objects/element_grey_rectangle_glossy.png" type="Texture" id=4]
+[ext_resource path="res://objects/element_purple_rectangle_glossy.png" type="Texture" id=5]
+[ext_resource path="res://objects/element_red_rectangle_glossy.png" type="Texture" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32, 16 )
+
+[node name="Brick" type="KinematicBody2D"]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource( 1 )
+
+[node name="BlueBrick" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 2 )
+
+[node name="GreenBrick" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 3 )
+
+[node name="GreyBrick" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 4 )
+
+[node name="PurpleBrick" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 5 )
+
+[node name="RedBrick" type="Sprite" parent="."]
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )

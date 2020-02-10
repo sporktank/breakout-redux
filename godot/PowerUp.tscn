@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://PowerUp.gd" type="Script" id=1]
+[ext_resource path="res://objects/element_blue_polygon_glossy.png" type="Texture" id=2]
+[ext_resource path="res://objects/element_green_polygon_glossy.png" type="Texture" id=3]
+[ext_resource path="res://objects/element_purple_cube_glossy.png" type="Texture" id=4]
+[ext_resource path="res://objects/element_red_polygon_glossy.png" type="Texture" id=5]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 22.7877
+
+[node name="PowerUp" type="KinematicBody2D"]
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 1 )
+
+[node name="BluePowerUp" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="GreenPowerUp" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+
+[node name="PurplePowerUp" type="Sprite" parent="."]
+texture = ExtResource( 4 )
+
+[node name="RedPowerUp" type="Sprite" parent="."]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )

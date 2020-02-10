@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Ball.gd" type="Script" id=1]
+[ext_resource path="res://objects/ballBlue.png" type="Texture" id=2]
+[ext_resource path="res://objects/ballGrey.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+
+[node name="Ball" type="KinematicBody2D"]
+collision_mask = 10
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="BlueBall" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="GreyBall" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
